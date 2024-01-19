@@ -41,7 +41,7 @@
   letter-spacing: .2px;
   font-weight: 800;
   line-height: 2;
-  font-size: 20px;
+  font-size: 30px;
   word-spacing: 8;
   color: #ff2020;
 }
@@ -248,6 +248,42 @@ img {
   opacity: 1;
 }
 
+
+.arrival-bg{
+    /* background-image: url(./assets/image/arrival-img/DI_blurred_backgrounds-004.jpg); */
+    background-image: url(./assets/image/arrival-img//DI_blurred_backgrounds-004.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .popular-bts{
+    width: 180px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    border: none;
+} */
+.popular-bts:hover{
+    background-color: rgba(233, 14, 14, 0.897);
+}
+
+.pap-img {
+    width: 80px;
+}
+.pap-card {
+    border-radius: 0 30px;
+    animation: 6s linear infinite border
+}
+@keyframes border {
+
+    0%,
+    100% {
+        border-radius: 0 30px
+    }
+
+    50% {
+        border-radius: 30px 0
+    }
+}
 @keyframes heartbeat {
   100% {
     transform: scale(1.03);
