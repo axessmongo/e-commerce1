@@ -21,14 +21,14 @@ import dropicon from '../assets/image/arrival-img/drop-shipping.png'
 import emiicon from '../assets/image/arrival-img/emi-payment.png'
 import secureicon from '../assets/image/arrival-img/isecure-payment.png'
 import customericon from '../assets/image/arrival-img/attention.png'
-// import footerimg from '../assets/image/arrival-img/World-Map.png'
+import footerimg from '../assets/image/arrival-img/World-Map.png'
 import popular1 from '../assets/image/arrival-img/popular1.png.webp'
 import popular2 from '../assets/image/arrival-img/popular2.png.webp'
 // import { Link } from 'react-router-dom'
 import fb from '../assets/image/arrival-img/fb.png'
 import twitter from '../assets/image/arrival-img/twitter.png'
 import youtube from '../assets/image/arrival-img/youtube.png'
-import whatsapp from '../assets/image/arrival-img/youtube.png'
+import whatsapp from '../assets/image/arrival-img/whatsapp.png'
 import insta from '../assets/image/arrival-img/insta.png'
 
 
@@ -83,7 +83,7 @@ export default function () {
                   <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('spectacular savings')}>Spectacular Savings</a>
                 </li>
 
-             
+
 
                 <li class="nav-item border-end heading1">
                   <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('contact')}>Contact</a>
@@ -505,14 +505,21 @@ export default function () {
 
 
       </section>
-      <section id='contact'> 
+      <section id='contact'>
         <footer className='bg-black ' >
           <div className='row mt-5 text-light '>
-            <div className='col-md-4  '>
+            <div className='col-md-4'>
               <h4 className='heading1 text-center mt-3' style={{ color: "#ff2020" }}>Address</h4>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sed ab a possimus tempore unde praesentium dolorum </p>
+              <p className='text-center'>No:20/234 Gandhi Road, <br />Thiruvallur street, Pallavaram  <br />chennai-24</p>
+              <div className='text-center'>
+                <img src={insta} alt="" className='img-fluid footer-icons' />
+                <img src={whatsapp} alt="" className='img-fluid footer-icons' />
+                <img src={twitter} alt="" className='img-fluid footer-icons' />
+                <img src={fb} alt="" className='img-fluid footer-icons' />
+                <img src={youtube} alt="" className='img-fluid footer-icons' />
+              </div>
             </div>
-            <div className='col-md-3 mt-3'>
+            <div className='col-md-2 mt-3'>
               <div>
                 <h4 className='heading1' style={{ color: "#ff2020" }}>Quick Links</h4>
 
@@ -521,7 +528,7 @@ export default function () {
                 <p className='heading2'>Contact Us</p>
               </div>
             </div>
-            <div className='col-md-3 mt-3'>
+            <div className='col-md-2 mt-3'>
               <div>
                 <h4 className='heading1' style={{ color: "#ff2020" }}>New Products</h4>
                 <p className='heading2'>Woman Cloth</p>
@@ -531,12 +538,9 @@ export default function () {
               </div>
             </div>
             <div className='col-md-4'>
-              <div>
-                <img src={insta} alt="" className='img-fluid' />
-                <img src={whatsapp} alt="" className='img-fluid' />
-                <img src={twitter} alt="" className='img-fluid' />
-                <img src={fb} alt="" className='img-fluid' />
-                <img src={youtube} alt="" className='img-fluid' />
+            <h4 className='heading1 text-center mt-3' style={{ color: "#ff2020" }}>World Wild Link</h4>
+              <div className='text-center'>
+                <img src={footerimg} alt="" className='img-fluid w-75' />
               </div>
             </div>
 
