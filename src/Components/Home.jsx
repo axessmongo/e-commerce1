@@ -25,6 +25,11 @@ import footerimg from '../assets/image/arrival-img/World-Map.png'
 import popular1 from '../assets/image/arrival-img/popular1.png.webp'
 import popular2 from '../assets/image/arrival-img/popular2.png.webp'
 import { Link } from 'react-router-dom'
+import fb from '../assets/image/arrival-img/fb.png'
+import twitter from '../assets/image/arrival-img/twitter.png'
+import youtube from '../assets/image/arrival-img/youtube.png'
+import whatsapp from '../assets/image/arrival-img/youtube.png'
+import insta from '../assets/image/arrival-img/insta.png'
 
 
 
@@ -498,7 +503,7 @@ export default function () {
           <div className='row mt-5 text-light '>
             <div className='col-md-4  '>
               <h4 className='heading1 text-center mt-3' style={{ color: "#ff2020" }}>Address</h4>
-              <p></p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sed ab a possimus tempore unde praesentium dolorum </p>
             </div>
             <div className='col-md-3 mt-3'>
               <div>
@@ -518,13 +523,14 @@ export default function () {
                 <p className='heading2'>Rubber made Toys</p>
               </div>
             </div>
-            <div className="social-area mb-4">
-
-              {/* <div className='col-6' style={{ color: "#1e2125", fontWeight: "500" }}>
-                <p>MY LINKEDIN PROFILE</p>
-                <Link to="https://linkedin.com/in/venkteshanj" target='_blank'>
-                  <img src={linked} alt="Linkedin logo" className='img-fluid p-2' style={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', width: '38px' }} /></Link>
-              </div> */}
+            <div className='col-md-4'>
+              <div>
+                <img src={insta} alt="" className='img-fluid' />
+                <img src={whatsapp} alt="" className='img-fluid' />
+                <img src={twitter} alt="" className='img-fluid' />
+                <img src={fb} alt="" className='img-fluid' />
+                <img src={youtube} alt="" className='img-fluid' />
+              </div>
             </div>
 
 
