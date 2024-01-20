@@ -25,10 +25,12 @@ import footerimg from '../assets/image/arrival-img/World-Map.png'
 import popular1 from '../assets/image/arrival-img/popular1.png.webp'
 import popular2 from '../assets/image/arrival-img/popular2.png.webp'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 
 
 export default function () {
+  const [isZoomed, setIsZoomed] = useState(false);
   let gotoTop = (secID) => {
     const element = document.getElementById(secID);
     const navbarElement = document.querySelector('.navbar>.container-fluid');
@@ -45,6 +47,10 @@ export default function () {
     }
 
   }
+  const handleZoom = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   gotoTop();
   return (
     <div className='' >
@@ -78,7 +84,7 @@ export default function () {
                   <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('spectacular savings')}>Spectacular Savings</a>
                 </li>
 
-             
+
 
                 <li class="nav-item border-end heading1">
                   <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('contact')}>Contact</a>
@@ -104,7 +110,7 @@ export default function () {
 
               </div>
               <div className='text-center heading3 mt-3'>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, placeat.</p>
+                <p className='heading3'>A watch makes a statement about both your fashion sense and your work ethic.</p>
 
               </div>
               <div className='text-center'>
@@ -144,8 +150,8 @@ export default function () {
             <h2 className='mb-4 heading4'>Fashion</h2>
           </div>
           <div className='col-md-4'>
-            <div>
-              <img src={arrival1} alt="arrival watch" className='img-fluid rounded-3' />
+            <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
+              <img src={arrival1} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
             <div className='text-center pt-3'>
               <h4 className='heading3 product'>Thermo Ball Etip Gloves</h4>
@@ -153,43 +159,39 @@ export default function () {
             </div>
           </div>
           <div className='col-md-4'>
-            <div>
-              <img src={arrival2} alt="arrival watch" className='img-fluid rounded-3' />
+            <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
+              <img src={arrival2} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
             <div className='text-center pt-3'>
-              <h4 className='heading3 product'>Thermo Ball Etip Gloves</h4>
-              <span className='heading2' style={{ color: "red" }}>$ 45,743</span>
+              <h4 className='heading3 product'>Versace V-Palazzo </h4>
+              <span className='heading2' style={{ color: "red" }}>$ 10,743</span>
             </div>
           </div>
           <div className='col-md-4'>
-            <div>
-              <img src={arrival3} alt="arrival watch" className='img-fluid rounded-3' />
+            <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
+              <img src={arrival3} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
             <div className='text-center pt-3'>
-              <h4 className='heading3 product'>Thermo Ball Etip Gloves</h4>
-              <span className='heading2' style={{ color: "red" }}>$ 45,743</span>
+              <h4 className='heading3 product'>Bfit Pro Silicone Black</h4>
+              <span className='heading2' style={{ color: "red" }}>$ 25,743</span>
             </div>
           </div>
         </div>
       </section>
       {/* gallery start */}
-      <section className='container-fluid'>
+      <section className='container-fluid '>
 
         <div className='arrival-bg'>
-          <div className='row py-5 my-5 d-flex justify-content-center align-items-center'>
+          <div className='row py-3 my-3  d-flex justify-content-center align-items-center'>
             <div className='col-md-6 text-light p-5'>
               <h1 className='heading4 '>New Life Start In right Time</h1>
-              <p className='pt-4 heading3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime impedit labore laboriosam
-                culpa molestiae, praesentium unde vero quidem rerum officiis quam ex nobis minus in qui.
-                Quisquam obcaecati veritatis incidunt.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ut modi ipsam labore fugit,
-                reiciendis exercitationem iste necessitatibus saepe, amet officia. Quasi ab quas vel,
-                debitis similique perspiciatis tenetur earum.
+              <p className='pt-4 heading3'>Discover a delicate selection of watches perfect for the deeply in love. OMEGA's newest range of sparkling Mini Trésor timepieces. Three beautiful models matched with elegant bracelets.
               </p>
+              <p className='pt-4 heading3'>Special events, limited editions and the best of the Penarosa lifestyle welcome to the newsletter for the most fashionable wrists</p>
 
 
             </div>
-            <div className='col-md-6 d-flex'>
+            <div className='col-md-6 d-flex '>
               <div className='col-6 d-flex justify-content-center align-items-center'>
                 <div className='text-center'>
                   <img src={arrival4} alt="arrival watch" className='img-fluid w-75 rounded-1' />
@@ -233,13 +235,13 @@ export default function () {
       {/* latest start */}
       <section id='latest'>
         <div className='' style={{ backgroundColor: "#DCDCDC" }}>
-          <div className='text-center py-3'>
-            <h2 className='mb-4 heading4' >Buy Online</h2>
-            <p className='heading3 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fuga.</p>
+          <div className='text-center py-5  '>
+            <h2 className='mb-1 heading4' >Buy Online</h2>
+            <p className='heading3  '>Time you enjoy wasting is not wasted time.</p>
           </div>
           <div className='container'>
             <div className='row'>
-              <div class="col-md-4 mt-5 px-3">
+              <div class="col-md-4 px-3">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch2} alt="" />
@@ -254,7 +256,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mt-5 px-3 ">
+              <div class="col-md-4 px-3 ">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch3} alt="" />
@@ -269,7 +271,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mt-5 px-3">
+              <div class="col-md-4 px-3">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch4} alt="" />
@@ -384,9 +386,7 @@ export default function () {
           <div className='col-md-6 d-flex justify-content-center align-items-center'>
             <div className='text-end px-3 mt-3'>
               <h1 className='heading4  '>Watch of Choice</h1>
-              <p className='heading1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Quam facilis magni pariatur nulla delectus odio adipisci
-                dolor sit amet consectetur, adipisicing elit.
+              <p className='heading1'>Wearing a watch is like wearing a symbol; a symbol of style, elegance and character in our lives and have been part of human history since the 1500s. It is no wonder many people are obsessed with owning a stylish, quality watch!
               </p>
               <button className='btn1 ' >Show Watch</button>
             </div>
@@ -405,9 +405,7 @@ export default function () {
           <div className='col-md-6 d-flex justify-content-center align-items-center'>
             <div className='px-3'>
               <h1 className='heading4 '>Watch of Choice</h1>
-              <p className='heading1'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Quam facilis magni pariatur nulla delectus odio adipisci
-                dolor sit amet consectetur, adipisicing elit.
+              <p className='heading1'>Wear it proudly and make a statement of sophistication. A watch makes a statement about both your fashion sense and your work ethic.
               </p>
               <div>
                 <button className='btn1 '>Show Watch</button>
@@ -500,7 +498,7 @@ export default function () {
 
 
       </section>
-      <section id='contact'> 
+      <section id='contact'>
         <footer className='bg-black ' >
           <div className='row mt-5 text-light '>
             <div className='col-md-4  '>
