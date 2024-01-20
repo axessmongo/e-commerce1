@@ -45,6 +45,7 @@
   word-spacing: 8;
   color: #ff2020;
 }
+
 .heading5 {
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: .2px;
@@ -55,7 +56,7 @@
 }
 
 
-.heading6{
+.heading6 {
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: .2px;
   font-weight: 700;
@@ -65,8 +66,9 @@
 }
 
 #name-nav:hover {
-  color:#ff2020;
+  color: #ff2020;
 }
+
 img {
   width: 100%;
   object-fit: contain;
@@ -78,7 +80,8 @@ img {
   top: 0%;
   z-index: 987698;
 }
-.nav-banner{
+
+.nav-banner {
   cursor: pointer;
 }
 
@@ -218,6 +221,7 @@ img {
 .heartbeat {
   animation: heartbeat 1s infinite alternate;
 }
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -249,12 +253,13 @@ img {
 }
 
 
-.arrival-bg{
-    /* background-image: url(./assets/image/arrival-img/DI_blurred_backgrounds-004.jpg); */
-    background-image: url(./assets/image/arrival-img//DI_blurred_backgrounds-004.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.arrival-bg {
+  /* background-image: url(./assets/image/arrival-img/DI_blurred_backgrounds-004.jpg); */
+  background-image: url(./assets/image/arrival-img//DI_blurred_backgrounds-004.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 /* .popular-bts{
     width: 180px;
     height: 50px;
@@ -262,28 +267,54 @@ img {
     color: white;
     border: none;
 } */
-.popular-bts:hover{
-    background-color: rgba(233, 14, 14, 0.897);
+.popular-bts:hover {
+  background-color: rgba(233, 14, 14, 0.897);
 }
 
 .pap-img {
-    width: 80px;
+  width: 80px;
 }
+
 .pap-card {
-    border-radius: 0 30px;
-    animation: 6s linear infinite border
+  border-radius: 0 30px;
+  animation: 6s linear infinite border
 }
+
+.papcard1 {
+  background: rgb(185,141,46);
+  background: linear-gradient(90deg, rgba(185,141,46,1) 0%, rgba(255,225,124,1) 100%);
+  color: black;
+}
+
+.papcard2 {
+  background:linear-gradient(90deg,#ff5802,#f3a680);
+}
+
+.papcard3 {
+  background: linear-gradient(90deg,#ed0c4e,#f3afc3);
+}
+
+.papcard4 {
+  background:linear-gradient(90deg,#3c76d6,#b8cef0)
+}
+
+.papcard5 {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
 @keyframes border {
 
-    0%,
-    100% {
-        border-radius: 0 30px
-    }
+  0%,
+  100% {
+    border-radius: 0 30px
+  }
 
-    50% {
-        border-radius: 30px 0
-    }
+  50% {
+    border-radius: 30px 0
+  }
 }
+
 @keyframes heartbeat {
   100% {
     transform: scale(1.03);
