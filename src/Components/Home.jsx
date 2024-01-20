@@ -56,7 +56,7 @@ export default function () {
       <section className='nav-banner'>
         <nav class="navbar navbar-expand-lg nav-banner" id='home'>
           <div class="container-fluid navbanner">
-            <a class="navbar-brand heading1" href="#" style={{ fontFamily: "700", fontSize: "23px" }}>Time<span style={{ color: "#f81f1f ", }}>Zone</span></a>
+            <a class="navbar-brand heading1" href="#" style={{ fontFamily: "800", fontSize: "38px" }}>Time<span style={{ color: "#f81f1f ", }}>Zone</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -68,27 +68,25 @@ export default function () {
                 </li>
 
                 <li class="nav-item heading1">
-                  <a class="nav-link active px-3 " aria-current="page" id='name-nav' onClick={() => gotoTop('shop')}>Shop</a>
+                  <a class="nav-link active px-3 " aria-current="page" id='name-nav' onClick={() => gotoTop('fashion')}>Fashion</a>
                 </li>
 
-                <li class="nav-item heading1">
+                {/* <li class="nav-item heading1">
                   <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('about')} >About</a>
+                </li> */}
+
+                <li class="nav-item heading1">
+                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('latest')} >Buy Online</a>
                 </li>
 
                 <li class="nav-item heading1">
-                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('latest')} >Latest</a>
+                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('spectacular savings')}>Spectacular Savings</a>
                 </li>
 
-                <li class="nav-item heading1">
-                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('blogs')}>Blogs</a>
-                </li>
-
-                <li class="nav-item heading1">
-                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('pages')} >Pages</a>
-                </li>
+             
 
                 <li class="nav-item border-end heading1">
-                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('pages')}>Contact</a>
+                  <a class="nav-link active px-3" aria-current="page" id='name-nav' onClick={() => gotoTop('contact')}>Contact</a>
                 </li>
 
 
@@ -114,10 +112,19 @@ export default function () {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, placeat.</p>
 
               </div>
-              <div className=' text-center' >
-                <button className='btn1 heading3 mt-4  '  style={{ borderRadius: "10px" }}>Contact now</button>
+              <div className='text-center'>
+                <button
+                  className='btn1 heading3 mt-4'
+                  style={{ borderRadius: "10px" }}
+                  onClick={() => window.open('tel:+1234567890', '_blank')}
+                >
+                  Contact now
+                </button>
               </div>
-             
+
+
+
+
 
             </div>
             <div className="col-md-4">
@@ -136,10 +143,10 @@ export default function () {
 
       </section>
       {/* arrival start */}
-      <section className='container'>
+      <section className='container' id="fashion">
         <div className='row py-2 my-2 text-center'>
           <div className='text-center py-2 my-2'>
-            <h2 className='mb-4 heading4'>New Arrival</h2>
+            <h2 className='mb-4 heading4'>Fashion</h2>
           </div>
           <div className='col-md-4'>
             <div>
@@ -232,7 +239,7 @@ export default function () {
       <section id='latest'>
         <div className='' style={{ backgroundColor: "#DCDCDC" }}>
           <div className='text-center py-3'>
-            <h2 className='mb-4 heading4' > Popular Items</h2>
+            <h2 className='mb-4 heading4' >Buy Online</h2>
             <p className='heading3 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, fuga.</p>
           </div>
           <div className='container'>
@@ -417,22 +424,22 @@ export default function () {
       </section>
 
       {/* choice watch & footer */}
-      <section className='container-fluid pt-4 mt-4'>
-        <h2 className='heading4 text-center mb-4'> paymnet </h2>
+      <section className='container-fluid pt-4 mt-4' id='spectacular savings'>
+        <h2 className='heading4 text-center mb-4'> Spectacular Savings </h2>
         <div class="pap-holder mb-3">
           <div class="row flex-wrap g-lg-0 g-3 justify-content-evenly">
             <div class="col-lg-2 col-md-6 col-12">
               <div
                 data-aos="fade-up"
                 data-aos-duration="600"
-                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center bg-warning"
+                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center papcard1 "
               >
                 <img
                   src={dropicon}
                   alt="debit-card"
                   class="img-fluid pap-img mb-2"
                 />
-                <p class="pap-text m-0 text-white fs-5  heading2">
+                <p class="pap-text m-0 fs-5  heading2">
                   Free Shipping
                 </p>
               </div>
@@ -441,56 +448,56 @@ export default function () {
               <div
                 data-aos="fade-up"
                 data-aos-duration="800"
-                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center bg-primary"
+                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center papcard2 "
               >
                 <img
                   src={profiticon}
                   alt="profits image"
                   class="img-fluid pap-img mb-2"
                 />
-                <p class="pap-text m-0 text-white fs-5 heading2">Cost-Effective</p>
+                <p class="pap-text m-0 e fs-5 heading2">Cost-Effective</p>
               </div>
             </div>
             <div class="col-lg-2 col-md-6 col-12">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1000"
-                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center bg-secondary"
+                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center papcard3 "
               >
                 <img
                   src={emiicon}
                   alt="job image"
                   class="img-fluid pap-img mb-2"
                 />
-                <p class="pap-text m-0 text-white fs-5 heading2 ">EMI Option</p>
+                <p class="pap-text m-0 fs-5 heading2 ">EMI Option</p>
               </div>
             </div>
             <div class="col-lg-2 col-md-6 col-12">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1200"
-                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center bg-danger"
+                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center papcard4"
               >
                 <img
                   src={secureicon}
                   alt="attention image"
                   class="img-fluid pap-img mb-2"
                 />
-                <p class="pap-text m-0 text-white fs-5 heading2">Secure Payment</p>
+                <p class="pap-text m-0  fs-5 heading2">Secure Payment</p>
               </div>
             </div>
             <div class="col-lg-2 col-md-6 col-12">
               <div
                 data-aos="fade-up"
                 data-aos-duration="1400"
-                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center bg-info"
+                class="border pap-card d-flex flex-column text-center align-items-center py-3 px-2 h-100 justify-content-center papcard5"
               >
                 <img
                   src={customericon}
                   alt="analysis image"
                   class="img-fluid pap-img mb-2"
                 />
-                <p class="pap-text m-0 text-white fs-5 heading2">Customer Services</p>
+                <p class="pap-text m-0  fs-5 heading2">Customer Services</p>
               </div>
             </div>
           </div>
@@ -498,7 +505,7 @@ export default function () {
 
 
       </section>
-      <section>
+      <section id='contact'> 
         <footer className='bg-black ' >
           <div className='row mt-5 text-light '>
             <div className='col-md-4  '>
