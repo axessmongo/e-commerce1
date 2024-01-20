@@ -26,6 +26,12 @@ import popular1 from '../assets/image/arrival-img/popular1.png.webp'
 import popular2 from '../assets/image/arrival-img/popular2.png.webp'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+// import { Link } from 'react-router-dom'
+import fb from '../assets/image/arrival-img/fb.png'
+import twitter from '../assets/image/arrival-img/twitter.png'
+import youtube from '../assets/image/arrival-img/youtube.png'
+import whatsapp from '../assets/image/arrival-img/whatsapp.png'
+import insta from '../assets/image/arrival-img/insta.png'
 
 
 
@@ -53,7 +59,7 @@ export default function () {
 
   gotoTop();
   return (
-    <div className='' >
+    <div className='overflow-x-hidden' >
       <section className='nav-banner'>
         <nav class="navbar navbar-expand-lg nav-banner" id='home'>
           <div class="container-fluid navbanner">
@@ -344,7 +350,7 @@ export default function () {
 
             </div>
             <div className=''>
-              <a href='./More.jsx' style={{ textDecoration: "none" }}>
+              <a href='' style={{ textDecoration: "none" }}>
                 <button className='btn1 heading3'> View More Products</button>
               </a>
             </div>
@@ -498,44 +504,56 @@ export default function () {
 
 
       </section>
-      <section id='contact'>
+      <section id='contact' className='text-center'>
         <footer className='bg-black ' >
           <div className='row mt-5 text-light '>
-            <div className='col-md-4  '>
-              <h4 className='heading1 text-center mt-3' style={{ color: "#ff2020" }}>Address</h4>
-              <p></p>
+            <div className='col-md-4 mt-3 '>
+              <h4 className='heading1 text-center heading1' style={{ color: "#ff2020" }}>Address</h4>
+              <p className='text-center heading2 mt-4'>No:20/234 Gandhi Road, <br />Thiruvallur street, Pallavaram  <br />chennai-24</p>
+              <div className='text-center'>
+                <a className='#' href='#'>
+                  <img src={insta} alt="" className='img-fluid footer-icons' />
+                  <img src={whatsapp} alt="" className='img-fluid footer-icons' />
+                  <img src={twitter} alt="" className='img-fluid footer-icons' />
+                  <img src={fb} alt="" className='img-fluid footer-icons' />
+                  <img src={youtube} alt="" className='img-fluid footer-icons' />
+                </a>
+              </div>
             </div>
-            <div className='col-md-3 mt-3'>
+            <div className='col-md-2 mt-3'>
               <div>
+
                 <h4 className='heading1' style={{ color: "#ff2020" }}>Quick Links</h4>
-
-                <p className='heading2'>Offers & Discounts</p>
-                <p className='heading2'>Get Coupon</p>
-                <p className='heading2'>Contact Us</p>
+                <a className='#' href='#' style={{ color: "#fff", textDecoration: "none" }}>
+                  <p className='heading2'>Offers & Discounts</p>
+                  <p className='heading2'>Get Coupon</p>
+                  <p className='heading2'>Contact Us</p>
+                </a>
               </div>
             </div>
-            <div className='col-md-3 mt-3'>
+            <div className='col-md-2 mt-3'>
               <div>
+
                 <h4 className='heading1' style={{ color: "#ff2020" }}>New Products</h4>
-                <p className='heading2'>Woman Cloth</p>
-                <p className='heading2'>Fashion Accessories</p>
-                <p className='heading2'>Man Accessories</p>
-                <p className='heading2'>Rubber made Toys</p>
+                <a className='#' href='#' style={{ color: "#fff", textDecoration: "none" }}>
+                  <p className='heading2'>Woman Cloth</p>
+                  <p className='heading2'>Fashion Accessories</p>
+                  <p className='heading2'>Man Accessories</p>
+                  <p className='heading2'>Rubber made Toys</p>
+                </a>
               </div>
             </div>
-            <div className="social-area mb-4">
-
-              {/* <div className='col-6' style={{ color: "#1e2125", fontWeight: "500" }}>
-                <p>MY LINKEDIN PROFILE</p>
-                <Link to="https://linkedin.com/in/venkteshanj" target='_blank'>
-                  <img src={linked} alt="Linkedin logo" className='img-fluid p-2' style={{ boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', width: '38px' }} /></Link>
-              </div> */}
+            <div className='col-md-4'>
+              <h4 className='heading1 text-center mt-3' style={{ color: "#ff2020" }}>World Wild Link</h4>
+              <div className='text-center'>
+                <img src={footerimg} alt="" className='img-fluid w-75' />
+              </div>
             </div>
 
 
 
           </div>
-          <h5 className='text-center heading3' style={{ color: "#fff" }}>right TimeZone © 2021. All rights reserved</h5>
+          <h5 className='text-center heading3' style={{ color: "#ff2020" }}>Copyrights timezone ©  All rights reserved.</h5>
         </footer>
       </section>
 

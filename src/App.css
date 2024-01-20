@@ -310,6 +310,9 @@ img {
 .zoom-container:hover img {
   transform: scale(1.2);
 }
+.footer-icons{
+  width: 40px;
+}
 
 @keyframes border {
 
