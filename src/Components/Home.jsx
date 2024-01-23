@@ -32,10 +32,16 @@ import twitter from '../assets/image/arrival-img/twitter.png'
 import youtube from '../assets/image/arrival-img/youtube.png'
 import whatsapp from '../assets/image/arrival-img/whatsapp.png'
 import insta from '../assets/image/arrival-img/insta.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 export default function () {
+  AOS.init({
+    // Add your AOS options here
+  });
+
   const [isZoomed, setIsZoomed] = useState(false);
   let gotoTop = (secID) => {
     const element = document.getElementById(secID);
@@ -107,18 +113,16 @@ export default function () {
           <div className="row d-flex align-items-center justify-content-center"
           >
 
-            <div className="col-md-8  ">
+            <div className="col-md-8" data-aos="zoom-in" data-aos-duration="1100">
               <div className='text-center fs-5 fw-bold mt-2 py-2 '>
                 <h3 className='heading6'>    Select your New <br className='d-none d-lg-block' /> Perfect Style
                 </h3>
-
-
-
               </div>
+
               <div className='text-center heading3 mt-3'>
                 <p className='heading3'>A watch makes a statement about both your fashion sense and your work ethic.</p>
-
               </div>
+
               <div className='text-center'>
                 <button
                   className='btn1 heading3 mt-4'
@@ -129,11 +133,8 @@ export default function () {
                 </button>
               </div>
 
-
-
-
-
             </div>
+
             <div className="col-md-4">
               <div className=" mx-auto">
                 <div className='rounded-3 md-img-shadow mx-2 d-flex justify-content-center justify-content-lg-start' data-aos="fade-right" data-aos-duration="700" data-delay=".4s" data-animation="bounceIn"  >
@@ -155,7 +156,8 @@ export default function () {
           <div className='text-center py-2 my-2'>
             <h2 className='mb-4 heading4'>Fashion</h2>
           </div>
-          <div className='col-md-4'>
+
+          <div className='col-md-4' data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
               <img src={arrival1} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
@@ -164,7 +166,8 @@ export default function () {
               <span className='heading2' style={{ color: "red" }}>$ 45,743</span>
             </div>
           </div>
-          <div className='col-md-4'>
+
+          <div className='col-md-4' data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
               <img src={arrival2} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
@@ -173,7 +176,8 @@ export default function () {
               <span className='heading2' style={{ color: "red" }}>$ 10,743</span>
             </div>
           </div>
-          <div className='col-md-4'>
+
+          <div className='col-md-4' data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div className={`zoom-container ${isZoomed ? 'zoomed' : ''}`} onClick={handleZoom}>
               <img src={arrival3} alt="arrival watch" className='img-fluid rounded-3 w-75' />
             </div>
@@ -182,14 +186,14 @@ export default function () {
               <span className='heading2' style={{ color: "red" }}>$ 25,743</span>
             </div>
           </div>
+
         </div>
       </section>
       {/* gallery start */}
       <section className='container-fluid '>
-
         <div className='arrival-bg'>
           <div className='row py-3 my-3  d-flex justify-content-center align-items-center'>
-            <div className='col-md-6 text-light p-5'>
+            <div className='col-md-6 text-light p-5' data-aos="zoom-in-down" data-aos-easing="ease-out-cubic" data-aos-duration="1100">
               <h1 className='heading4 '>New Life Start In right Time</h1>
               <p className='pt-4 heading3'>Discover a delicate selection of watches perfect for the deeply in love. OMEGA's newest range of sparkling Mini Trésor timepieces. Three beautiful models matched with elegant bracelets.
               </p>
@@ -199,16 +203,16 @@ export default function () {
             </div>
             <div className='col-md-6 d-flex '>
               <div className='col-6 d-flex justify-content-center align-items-center'>
-                <div className='text-center'>
+                <div className='text-center' data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                   <img src={arrival4} alt="arrival watch" className='img-fluid w-75 rounded-1' />
                 </div>
               </div>
               <div className='col-6'>
-                <div>
+                <div data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                   <img src={arrival2} alt="arrival watch" className='img-fluid w-50 rounded-1' />
                 </div>
 
-                <div className='text-center pt-4 mt-1'>
+                <div className='text-center pt-4 mt-1' data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                   <img src={arrival5} alt="arrival watch" className='img-fluid w-75 rounded-1' />
                 </div>
               </div>
@@ -217,27 +221,30 @@ export default function () {
         </div>
 
 
-        <div className='row py-3 my-3'>
+        
+      </section>
+      <section className='container-fluid'>
+      <div className='row py-3 my-3'>
           <div className='col-md-6'>
-            <div>
+            <div data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
               <img src={gallery1} alt="galleryimg" className='img-fluid' />
             </div>
-          </div>
+          </div >
           <div className='col-md-3'>
-            <div>
+            <div data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1800">
               <img src={gallery2} alt="galleryimg" className='img-fluid' />
             </div>
           </div>
           <div className='col-md-3'>
-            <div>
+            <div data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1600">
               <img src={gallery3} alt="galleryimg" className='img-fluid' />
             </div>
-            <div className='pt-4'>
+            <div className='pt-4' data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="1400">
               <img src={gallery4} alt="galleryimg" className='img-fluid' />
             </div>
           </div>
         </div>
-      </section>
+        </section>
       {/* latest start */}
       <section id='latest'>
         <div className='' style={{ backgroundColor: "#DCDCDC" }}>
@@ -247,7 +254,7 @@ export default function () {
           </div>
           <div className='container'>
             <div className='row'>
-              <div class="col-md-4 px-3">
+              <div class="col-md-4 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch2} alt="" />
@@ -262,7 +269,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 px-3 ">
+              <div class="col-md-4 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch3} alt="" />
@@ -277,7 +284,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 px-3">
+              <div class="col-md-4 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch4} alt="" />
@@ -294,7 +301,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mt-5 px-3">
+              <div class="col-md-4 mt-5 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch5} alt="" />
@@ -311,7 +318,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mt-5 px-3">
+              <div class="col-md-4 mt-5 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch6} alt="" />
@@ -328,7 +335,7 @@ export default function () {
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 mt-5 px-3">
+              <div class="col-md-4 mt-5 px-3" data-aos="zoom-out" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <div class="single-popular-items mb-50 text-center">
                   <div class="popular-img">
                     <img src={watch7} alt="" />
@@ -354,7 +361,7 @@ export default function () {
                 <button className='btn1 heading3'> View More Products</button>
               </a>
             </div>
-            <div className="video-area">
+            <div className="video-area" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
               <div className="container-fluid videos  ">
                 <div className="row">
                   <div className="col-lg-12">
@@ -389,7 +396,9 @@ export default function () {
       {/* popular start */}
       <section className='container'>
         <div className='row py-2 my-2'>
-          <div className='col-md-6 d-flex justify-content-center align-items-center'>
+          <div className='col-md-6 d-flex justify-content-center align-items-center' data-aos="fade-right"
+               data-aos-offset="500"
+               data-aos-easing="ease-in-sine">
             <div className='text-end px-3 mt-3'>
               <h1 className='heading4  '>Watch of Choice</h1>
               <p className='heading1'>Wearing a watch is like wearing a symbol; a symbol of style, elegance and character in our lives and have been part of human history since the 1500s. It is no wonder many people are obsessed with owning a stylish, quality watch!
@@ -397,18 +406,24 @@ export default function () {
               <button className='btn1 ' >Show Watch</button>
             </div>
           </div>
-          <div className='col-md-6'>
+          <div className='col-md-6' data-aos="fade-left"
+               data-aos-offset="500"
+               data-aos-easing="ease-in-sine">
             <div className='text-center'>
               <img src={popular1} alt="" className='img-fluid w-75' />
             </div>
           </div>
 
-          <div className='col-md-6'>
+          <div className='col-md-6' data-aos="fade-right"
+               data-aos-offset="500"
+               data-aos-easing="ease-in-sine">
             <div className='text-center'>
               <img src={popular2} alt="" className='img-fluid w-75' />
             </div>
           </div>
-          <div className='col-md-6 d-flex justify-content-center align-items-center'>
+          <div className='col-md-6 d-flex justify-content-center align-items-center' data-aos="fade-left"
+               data-aos-offset="500"
+               data-aos-easing="ease-in-sine">
             <div className='px-3'>
               <h1 className='heading4 '>Watch of Choice</h1>
               <p className='heading1'>Wear it proudly and make a statement of sophistication. A watch makes a statement about both your fashion sense and your work ethic.
