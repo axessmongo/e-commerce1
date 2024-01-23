@@ -36,6 +36,7 @@ import insta from '../assets/image/arrival-img/insta.png'
 
 
 export default function () {
+  const [active, setActive] = useState(false)
   const [isZoomed, setIsZoomed] = useState(false);
   let gotoTop = (secID) => {
     const element = document.getElementById(secID);
@@ -64,8 +65,8 @@ export default function () {
         <nav class="navbar navbar-expand-lg nav-banner" id='home'>
           <div class="container-fluid navbanner">
             <a class="navbar-brand heading1" href="#" style={{ fontFamily: "800", fontSize: "38px" }}>Time<span style={{ color: "#f81f1f ", }}>Zone</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler shadow-none"  onClick={() => setActive(!active)} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i className={`bi ${active ? "bi-x" : "bi-list"}`}></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-4  p-4 mb-lg-0 text-center ">
