@@ -68,7 +68,7 @@ export default function () {
   return (
     <div className='overflow-x-hidden' >
       <div className='buy-now d-flex justify-content-center align-items-center rounded-2'>
-        <Link to="https://axesstechnology.org/contact" className='buy-now-bt'>BuyNow</Link>
+        <Link to="https://axesstechnology.in/contact" className='buy-now-bt'>BuyNow</Link>
       </div>
       <section className='nav-banner'>
         <nav className="navbar navbar-expand-lg nav-banner" id='home'>
